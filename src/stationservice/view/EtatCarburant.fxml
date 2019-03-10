@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="830.0" prefWidth="1218.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationservice.controler.EtatCarburantController">
+    <stylesheets>
+        <URL value="@/stationservice/ressource/login.css" />
+    </stylesheets>
+   <children>
+      <GridPane hgap="30.0" layoutX="29.0" layoutY="19.0" prefHeight="676.0" prefWidth="1132.0" stylesheets="@../ressource/login.css">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="600.0" minHeight="10.0" prefHeight="512.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="600.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="600.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="600.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Super">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sans plomb I" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sans plmob II" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gasoil" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+            </Text>
+            <GridPane fx:id="super_level" prefHeight="486.0" prefWidth="263.0" vgap="2.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <GridPane fx:id="sp1_level" vgap="2.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <GridPane fx:id="sp2_level" vgap="2.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <GridPane fx:id="gasoil_level" vgap="2.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Text fx:id="super_quantie" strokeType="OUTSIDE" strokeWidth="0.0" text="Qauntite" GridPane.rowIndex="3" />
+            <JFXButton onAction="#super_gerer" styleClass="button_normal" text="Gerer" GridPane.rowIndex="4" />
+            <Text fx:id="sp1_quantite" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text fx:id="sp2_quantite" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Text fx:id="gasoil_quantite" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <JFXButton onAction="#sp1_gerer" styleClass="button_normal" text="Gerer" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXButton onAction="#sp2_gerer" styleClass="button_normal" text="Gerer" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <JFXButton onAction="#gazoil_gerer" styleClass="button_normal" text="Gerer" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <HBox fx:id="conteur_super" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="1.0" stylesheets="@../ressource/login.css" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+               </children>
+            </HBox>
+            <HBox fx:id="conteur_sp1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="1.0" stylesheets="@../ressource/login.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+               </children>
+            </HBox>
+            <HBox fx:id="conteur_sp2" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="1.0" stylesheets="@../ressource/login.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+               </children>
+            </HBox>
+            <HBox fx:id="conteur_gasoil" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="1.0" stylesheets="@../ressource/login.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="30.0" styleClass="conters" text="1" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

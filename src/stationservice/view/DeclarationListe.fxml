@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="830.0" prefWidth="1218.0" style="-fx-background-color: #fffFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationservice.controler.DeclarationListeController">
+    <stylesheets>
+        <URL value="@/stationservice/ressource/login.css" />
+    </stylesheets>
+   <children>
+      <JFXListView fx:id="liste" layoutX="50.0" layoutY="145.0" prefHeight="570.0" prefWidth="1073.0" />
+      <GridPane layoutX="50.0" layoutY="104.0" prefHeight="40.0" prefWidth="1073.0" styleClass="listeViewTete" stylesheets="@../ressource/login.css">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="141.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="131.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="84.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="97.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="113.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="114.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="112.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="117.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="74.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pompiste" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Debut" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fin" GridPane.columnIndex="4">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bons" GridPane.columnIndex="6">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total" GridPane.columnIndex="5">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="bellet" GridPane.columnIndex="7">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="avance" GridPane.columnIndex="8">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <Pane layoutY="-1.0" prefHeight="50.0" prefWidth="1218.0" styleClass="buttomBar" stylesheets="@../ressource/login.css">
+         <children>
+            <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des declaration">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

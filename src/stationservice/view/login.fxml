@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="316.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationservice.controler.LoginController">
+   <children>
+      <ImageView fitHeight="144.0" fitWidth="159.0" layoutX="84.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="stationservice/images/logonaftal.png" />
+         </image></ImageView>
+      <JFXButton fx:id="login_button" layoutX="63.0" layoutY="314.0" onAction="#login" prefHeight="42.0" prefWidth="181.0" styleClass="button_connect" stylesheets="@../ressource/login.css" text="Login" />
+      <JFXTextField fx:id="user" focusColor="#0e1372" layoutX="39.0" layoutY="182.0" maxWidth="232.0" minWidth="194.0" prefHeight="42.0" prefWidth="232.0" promptText="Utilisateur" unFocusColor="#e1cf0a">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="motpasse" focusColor="#0e1372" layoutX="40.0" layoutY="247.0" maxWidth="232.0" minWidth="232.0" prefHeight="42.0" prefWidth="232.0" promptText="Mot de passe" unFocusColor="#e1cf0a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="836.0" prefWidth="831.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationservice.controler.DeclarationDetialsController">
+    <stylesheets>
+        <URL value="@/stationservice/ressource/login.css" />
+    </stylesheets>
+   <children>
+      <Text layoutX="60.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N°" wrappingWidth="29.00000001490116">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text fx:id="id" layoutX="93.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero " wrappingWidth="96.2060546875">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="61.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pompiste" wrappingWidth="103.2060546875">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="pompiste_nom" labelFloat="true" layoutX="59.0" layoutY="207.0" maxWidth="160.0" minWidth="139.0" prefHeight="33.0" prefWidth="139.0" promptText="Nom" />
+      <JFXTextField fx:id="pompiste_prenom" labelFloat="true" layoutX="202.0" layoutY="204.0" maxWidth="160.0" minWidth="139.0" prefHeight="33.0" prefWidth="139.0" promptText="Prenom" />
+      <Text layoutX="58.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produit" wrappingWidth="96.20604515075684">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="57.0" layoutY="283.0" styleClass="listeViewTete" stylesheets="@../ressource/login.css">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="ID">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Designation" GridPane.columnIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="ancien" GridPane.columnIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Nouveau" GridPane.columnIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Prix" GridPane.columnIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Quantite" GridPane.columnIndex="5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Total" GridPane.columnIndex="6">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <JFXListView fx:id="liste_produit" layoutX="58.0" layoutY="316.0" prefHeight="204.0" prefWidth="700.0" />
+      <Text layoutX="60.0" layoutY="562.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bons" wrappingWidth="57.00000183284283">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="59.0" layoutY="574.0" styleClass="listeViewTete" stylesheets="@../ressource/login.css">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="77.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="106.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="118.0" minWidth="10.0" prefWidth="109.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="108.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="ID">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Valeur" GridPane.columnIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Nombre" GridPane.columnIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Somme" GridPane.columnIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <JFXListView fx:id="liste_Bons" layoutX="60.0" layoutY="607.0" prefHeight="204.0" prefWidth="400.0" />
+      <JFXButton fx:id="print" layoutX="556.0" layoutY="666.0" onAction="#print_action" prefHeight="44.0" prefWidth="149.0" stylesheets="@../ressource/login.css" text="Imprimmer" />
+      <JFXButton fx:id="close" layoutX="560.0" layoutY="735.0" onAction="#close_action" prefHeight="44.0" prefWidth="149.0" stylesheets="@../ressource/login.css" text="Close" />
+      <HBox layoutX="62.0" layoutY="124.0" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <JFXTextField fx:id="decl_total" labelFloat="true" maxHeight="32.0" maxWidth="164.0" minHeight="32.0" minWidth="164.0" prefHeight="32.0" prefWidth="164.0" promptText="Total" />
+            <JFXTextField fx:id="decl_bons" labelFloat="true" maxHeight="32.0" maxWidth="164.0" minHeight="32.0" minWidth="164.0" prefHeight="32.0" prefWidth="164.0" promptText="Bons" />
+            <JFXTextField fx:id="billets" labelFloat="true" maxHeight="32.0" maxWidth="164.0" minHeight="32.0" minWidth="164.0" prefHeight="32.0" prefWidth="164.0" promptText="Billets" />
+            <JFXTextField fx:id="avance" labelFloat="true" maxHeight="32.0" maxWidth="164.0" minHeight="32.0" minWidth="164.0" prefHeight="32.0" prefWidth="164.0" promptText="Avance" />
+         </children>
+      </HBox>
+      <JFXTextField fx:id="date" labelFloat="true" layoutX="308.0" layoutY="19.0" maxHeight="32.0" maxWidth="164.0" minHeight="32.0" minWidth="164.0" prefHeight="32.0" prefWidth="164.0" promptText="Date" />
+      <JFXTextField fx:id="debut" labelFloat="true" layoutX="533.0" layoutY="19.0" maxHeight="32.0" maxWidth="82.0" minHeight="32.0" minWidth="82.0" prefHeight="32.0" prefWidth="82.0" promptText="Debut" />
+      <JFXTextField fx:id="fin" labelFloat="true" layoutX="633.0" layoutY="19.0" maxHeight="32.0" maxWidth="82.0" minHeight="32.0" minWidth="82.0" prefHeight="32.0" prefWidth="82.0" promptText="Fin" />
+      <JFXTextField fx:id="date1" labelFloat="true" layoutX="308.0" layoutY="70.0" maxHeight="32.0" maxWidth="164.0" minHeight="32.0" minWidth="164.0" prefHeight="32.0" prefWidth="164.0" promptText="Date" />
+      <JFXTextField fx:id="debut1" labelFloat="true" layoutX="533.0" layoutY="70.0" maxHeight="32.0" maxWidth="82.0" minHeight="32.0" minWidth="82.0" prefHeight="32.0" prefWidth="82.0" promptText="Debut" />
+      <JFXTextField fx:id="fin1" labelFloat="true" layoutX="633.0" layoutY="70.0" maxHeight="32.0" maxWidth="82.0" minHeight="32.0" minWidth="82.0" prefHeight="32.0" prefWidth="82.0" promptText="Fin" />
+   </children>
+</AnchorPane>

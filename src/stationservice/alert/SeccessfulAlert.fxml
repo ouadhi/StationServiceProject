@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="296.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton layoutX="12.0" layoutY="225.0" prefHeight="47.0" prefWidth="273.0" style="-fx-background-color: #35d0ba;" text="OK" textFill="#fcfcfc">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="title" layoutX="72.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Successful">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text fx:id="message" layoutX="67.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I am an alert box!&quot;">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="72.0" fitWidth="69.0" layoutX="114.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="stationservice/imgs/success.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

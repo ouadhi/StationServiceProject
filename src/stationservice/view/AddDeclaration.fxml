@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="876.0" prefWidth="1218.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationservice.controler.AddDeclarationController">
+    <stylesheets>
+        <URL value="@/stationservice/ressource/login.css" />
+    </stylesheets>
+   <children>
+      <JFXButton fx:id="save_bttn" layoutX="746.0" layoutY="740.0" onAction="#save_action" prefHeight="45.0" prefWidth="132.0" styleClass="button_normal" stylesheets="@../ressource/login.css" text="Enregistrer" />
+      <JFXButton fx:id="annuler_bttn" layoutX="905.0" layoutY="740.0" onAction="#annuler_action" prefHeight="45.0" prefWidth="132.0" styleClass="button_normal" stylesheets="@../ressource/login.css" text="Annuler" />
+      <JFXButton fx:id="liste" layoutX="971.0" layoutY="5.0" onAction="#liste_bttn" prefHeight="45.0" prefWidth="141.0" styleClass="button_normal" stylesheets="@../ressource/login.css" text="Liste" />
+      <Label layoutX="27.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" text="Pompiste">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="14.0" prefHeight="27.0" prefWidth="37.0" text="Date">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="date" layoutX="426.0" layoutY="11.0" />
+      <AnchorPane layoutX="14.0" layoutY="69.0" prefHeight="312.0" prefWidth="1118.0">
+         <children>
+            <Text layoutX="1.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produit">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
+            <GridPane layoutY="24.0" prefHeight="238.0" prefWidth="1118.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="107.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="144.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="137.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="132.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="142.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Super 1">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="super1_ancien" labelFloat="true" maxWidth="124.0" minWidth="124.0" prefHeight="33.0" prefWidth="124.0" promptText="Ancien" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="super1_nouveau" labelFloat="true" maxWidth="124.0" minWidth="124.0" onInputMethodTextChanged="#super1_change" onKeyPressed="#super1_nouveau_presed" onKeyReleased="#super1_nouveau_relased" onKeyTyped="#super1_nouveau_typed" prefHeight="33.0" prefWidth="124.0" promptText="Nouveau" GridPane.columnIndex="2" />
+                  <JFXTextField fx:id="super1_quantite" labelFloat="true" maxWidth="116.0" minWidth="83.0" prefHeight="33.0" prefWidth="87.0" promptText="Quantite" GridPane.columnIndex="3" />
+                  <JFXTextField fx:id="super1_prix" labelFloat="true" maxWidth="109.0" minWidth="109.0" prefHeight="31.0" prefWidth="109.0" promptText="Prix" GridPane.columnIndex="4" />
+                  <JFXTextField fx:id="super1_total" labelFloat="true" maxWidth="141.0" minWidth="141.0" prefHeight="33.0" prefWidth="141.0" promptText="Total Super 1" GridPane.columnIndex="5" />
+                  <Label text="S/plomb1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="SP1_ancien" labelFloat="true" maxWidth="124.0" minWidth="124.0" prefHeight="33.0" prefWidth="124.0" promptText="Ancien" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="SP1_nouveau" labelFloat="true" maxWidth="124.0" minWidth="124.0" onInputMethodTextChanged="#SP1_change" onKeyPressed="#SP1_nouveau_presed" onKeyReleased="#SP1_nouveau_relased" onKeyTyped="#SP1_nouveau_typed" prefHeight="33.0" prefWidth="124.0" promptText="Nouveau" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="SP1_quantite" labelFloat="true" maxWidth="116.0" minWidth="83.0" prefHeight="33.0" prefWidth="87.0" promptText="Quantite" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="SP1_prix" labelFloat="true" maxWidth="109.0" minWidth="109.0" prefHeight="31.0" prefWidth="109.0" promptText="Prix" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="SP1_total" labelFloat="true" maxWidth="141.0" minWidth="141.0" prefHeight="33.0" prefWidth="141.0" promptText="Total Super 1" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Label text="S/plomb2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="SP2_ancien" labelFloat="true" maxWidth="124.0" minWidth="124.0" prefHeight="33.0" prefWidth="124.0" promptText="Ancien" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="SP2_nouveau" labelFloat="true" maxWidth="124.0" minWidth="124.0" onInputMethodTextChanged="#SP2_change" onKeyPressed="#SP2_nouveau_presed" onKeyReleased="#SP2_nouveau_relased" onKeyTyped="#SP2_nouveau_typed" prefHeight="33.0" prefWidth="124.0" promptText="Nouveau" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="SP2_quantite" labelFloat="true" maxWidth="116.0" minWidth="83.0" prefHeight="33.0" prefWidth="87.0" promptText="Quantite" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="SP2_prix" labelFloat="true" maxWidth="109.0" minWidth="109.0" prefHeight="31.0" prefWidth="109.0" promptText="Prix" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="SP2_total" labelFloat="true" maxWidth="141.0" minWidth="141.0" prefHeight="33.0" prefWidth="141.0" promptText="Total Super 1" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Label text="Gazoil" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="gazoil_ancien3" labelFloat="true" maxWidth="124.0" minWidth="124.0" prefHeight="33.0" prefWidth="124.0" promptText="Ancien" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="gazoil_nouveau" labelFloat="true" maxWidth="124.0" minWidth="124.0" onInputMethodTextChanged="#gazoil_change" onKeyPressed="#gazoil_nouveau_presed" onKeyReleased="#gazoil_nouveau_relased" onKeyTyped="#gazoil_nouveau_typed" prefHeight="33.0" prefWidth="124.0" promptText="Nouveau" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="gazoil_quantite" labelFloat="true" maxWidth="116.0" minWidth="83.0" prefHeight="33.0" prefWidth="87.0" promptText="Quantite" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="gazoil_prix" labelFloat="true" maxWidth="109.0" minWidth="109.0" prefHeight="31.0" prefWidth="109.0" promptText="Prix" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="gazoil_total" labelFloat="true" maxWidth="141.0" minWidth="141.0" prefHeight="33.0" prefWidth="141.0" promptText="Total Super 1" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Text fx:id="total_somme_produit" layoutX="56.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="393.0" prefHeight="312.0" prefWidth="767.0">
+         <children>
+            <Text layoutX="1.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bons">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text layoutX="1.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
+            <GridPane layoutY="23.0" prefHeight="227.0" prefWidth="743.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="93.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="134.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.0" minWidth="10.0" prefWidth="151.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="82.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="431.0" minWidth="10.0" prefWidth="144.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="431.0" minWidth="10.0" prefWidth="160.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="B-1150">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="val_B1" labelFloat="true" maxWidth="124.0" minWidth="124.0" onKeyPressed="#pressed_B1" onKeyReleased="#released_B1" onKeyTyped="#typed_B1" prefHeight="33.0" prefWidth="124.0" promptText="Nombre" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="somme_B1" labelFloat="true" maxWidth="124.0" minWidth="124.0" onInputMethodTextChanged="#super1_change" onKeyPressed="#super1_nouveau_presed" onKeyReleased="#super1_nouveau_relased" onKeyTyped="#super1_nouveau_typed" prefHeight="33.0" prefWidth="124.0" promptText="Total" GridPane.columnIndex="2" />
+                  <JFXTextField fx:id="somme_B4" labelFloat="true" maxWidth="141.0" minWidth="141.0" prefHeight="33.0" prefWidth="141.0" promptText="Total" GridPane.columnIndex="5" />
+                  <Label text="B-850" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="somme_B2" labelFloat="true" maxWidth="124.0" minWidth="124.0" onInputMethodTextChanged="#SP1_change" onKeyPressed="#SP1_nouveau_presed" onKeyReleased="#SP1_nouveau_relased" onKeyTyped="#SP1_nouveau_typed" prefHeight="33.0" prefWidth="124.0" promptText="Total" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="somme_B5" labelFloat="true" maxWidth="141.0" minWidth="141.0" prefHeight="33.0" prefWidth="141.0" promptText="Total" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Label text="B-839" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="somme_B3" labelFloat="true" maxWidth="124.0" minWidth="124.0" onInputMethodTextChanged="#SP2_change" onKeyPressed="#SP2_nouveau_presed" onKeyReleased="#SP2_nouveau_relased" onKeyTyped="#SP2_nouveau_typed" prefHeight="33.0" prefWidth="124.0" promptText="Total" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="somme_B6" labelFloat="true" maxWidth="141.0" minWidth="141.0" prefHeight="33.0" prefWidth="141.0" promptText="Total" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Label text="B-690" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="B-416" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="B-332" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="val_B2" labelFloat="true" maxWidth="124.0" minWidth="124.0" onKeyPressed="#pressed_B2" onKeyReleased="#released_B2" onKeyTyped="#typed_B2" prefHeight="33.0" prefWidth="124.0" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="val_B3" labelFloat="true" maxWidth="124.0" minWidth="124.0" onKeyPressed="#pressed_B3" onKeyReleased="#released_B3" onKeyTyped="#typed_B3" prefHeight="33.0" prefWidth="124.0" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="val_B4" labelFloat="true" maxWidth="124.0" minWidth="124.0" onKeyPressed="#pressed_B4" onKeyReleased="#released_B4" onKeyTyped="#typed_B4" prefHeight="33.0" prefWidth="124.0" promptText="Nombre" GridPane.columnIndex="4" />
+                  <JFXTextField fx:id="val_B5" labelFloat="true" maxWidth="124.0" minWidth="124.0" onKeyPressed="#pressed_B5" onKeyReleased="#released_B5" onKeyTyped="#typed_B5" prefHeight="33.0" prefWidth="124.0" promptText="Nombre" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="val_B6" labelFloat="true" maxWidth="124.0" minWidth="124.0" onKeyPressed="#pressed_B6" onKeyReleased="#released_B6" onKeyTyped="#typed_B6" prefHeight="33.0" prefWidth="124.0" promptText="Nombre" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Text fx:id="total_somme_bons" layoutX="57.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <HBox fx:id="hbox" layoutX="107.0" layoutY="5.0" prefHeight="45.0" prefWidth="246.0" />
+      <GridPane layoutX="903.0" layoutY="428.0" prefHeight="216.0" prefWidth="197.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXTextField fx:id="montant" labelFloat="true" maxWidth="182.0" minWidth="182.0" prefHeight="33.0" prefWidth="182.0" promptText="montant" />
+            <JFXTextField fx:id="peso" labelFloat="true" maxWidth="182.0" minWidth="182.0" onKeyPressed="#peso_pressed" onKeyReleased="#peso_released" onKeyTyped="#peso_typed" prefHeight="33.0" prefWidth="182.0" promptText="Billets" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="difference" labelFloat="true" maxWidth="182.0" minWidth="179.0" prefHeight="33.0" prefWidth="182.0" promptText="Monnaie" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="avance" maxWidth="182.0" prefHeight="33.0" prefWidth="182.0" promptText="Avance" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="107.0" layoutY="726.0" prefHeight="51.0" prefWidth="373.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXTextField fx:id="total_avance" promptText="total-avance" />
+            <JFXTextField fx:id="monnaie_avance" promptText="monnaie-avance" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="650.0" layoutY="14.0" prefHeight="27.0" prefWidth="37.0" text="De">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="812.0" layoutY="14.0" prefHeight="27.0" prefWidth="25.0" text="A">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="debut" layoutX="679.0" layoutY="13.0" prefHeight="27.0" prefWidth="109.0" showTime="true" />
+      <JFXDatePicker fx:id="fin" layoutX="837.0" layoutY="13.0" prefHeight="27.0" prefWidth="109.0" showTime="true" />
+      <Separator layoutX="13.0" layoutY="392.0" prefHeight="3.0" prefWidth="1180.0" />
+      <Separator layoutX="11.0" layoutY="714.0" prefHeight="3.0" prefWidth="1180.0" />
+      <Label layoutX="366.0" layoutY="47.0" prefHeight="27.0" prefWidth="37.0" text="Date">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="date1" layoutX="426.0" layoutY="44.0" />
+      <Label layoutX="650.0" layoutY="47.0" prefHeight="27.0" prefWidth="37.0" text="De">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="812.0" layoutY="47.0" prefHeight="27.0" prefWidth="25.0" text="A">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="debut1" layoutX="679.0" layoutY="46.0" prefHeight="27.0" prefWidth="109.0" showTime="true" />
+      <JFXDatePicker fx:id="fin1" layoutX="837.0" layoutY="46.0" prefHeight="27.0" prefWidth="109.0" showTime="true" />
+   </children>
+</AnchorPane>

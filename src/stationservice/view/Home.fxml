@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTogglePane?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="830.0" prefWidth="1366.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationservice.controler.HomeController">
+    <stylesheets>
+        <URL value="@/stationservice/ressource/login.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="-1.0" layoutY="224.0" prefHeight="364.0" prefWidth="143.0" spacing="10.0" stylesheets="@../ressource/login.css">
+         <children>
+            <JFXButton fx:id="home_bttn" onAction="#homeAction" prefHeight="54.0" prefWidth="193.0" styleClass="button_normal" text="Home" />
+            <JFXButton fx:id="declaration_bttn" onAction="#declarationAction" prefHeight="54.0" prefWidth="192.0" styleClass="button_normal" text="Declaration" textAlignment="CENTER" />
+            <JFXButton fx:id="pompiste_bttn" onAction="#pompisteAction" prefHeight="54.0" prefWidth="192.0" styleClass="button_normal" text="Pompiste" />
+            <JFXButton fx:id="produit_bttn" onAction="#produitAction" prefHeight="54.0" prefWidth="191.0" styleClass="button_normal" text="Produit" />
+            <JFXButton fx:id="bon_bttn" onAction="#bonAction" prefHeight="54.0" prefWidth="193.0" styleClass="button_normal" text="Bon" />
+            <JFXButton fx:id="user" layoutX="12.0" layoutY="266.0" onAction="#userButton" prefHeight="54.0" prefWidth="193.0" styleClass="button_normal" text="Utilisateur" />
+         </children>
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+      </VBox>
+      <AnchorPane fx:id="mainPane" layoutX="148.0" prefHeight="830.0" prefWidth="1218.0" style="-fx-background-color: #ffffff;" stylesheets="@../ressource/login.css">
+         <children>
+            <ImageView fitHeight="195.0" fitWidth="171.0" layoutX="530.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="stationservice/images/logonaftal.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXTogglePane layoutX="117.0" layoutY="101.0" />
+      <ImageView fitHeight="89.0" fitWidth="96.0" layoutX="30.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="stationservice/imgs/man.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="user_txt" layoutX="15.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="110.48453307151794">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </Text>
+      <Separator layoutX="2.0" layoutY="200.0" prefHeight="3.0" prefWidth="141.0" />
+   </children>
+</AnchorPane>

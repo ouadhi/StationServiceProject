@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="740.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fontSmoothingType="LCD" layoutX="497.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bonjour" textAlignment="CENTER" wrappingWidth="372.13671875">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="96.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Text>
+   </children>
+</AnchorPane>

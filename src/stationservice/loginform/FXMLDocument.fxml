@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="740.0" prefWidth="1366.0" styleClass="AnchorPane" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationservice.loginform.login2">
+   <children>
+      <ImageView fx:id="logo" fitHeight="150.0" fitWidth="205.0" layoutX="633.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="529.0" AnchorPane.leftAnchor="633.0" AnchorPane.rightAnchor="610.8350524902344" AnchorPane.topAnchor="61.0">
+          <image>
+              <Image url="stationservice/imgs/logo.png" />
+          </image>
+      </ImageView>
+      <JFXTextField fx:id="username" focusColor="#75cac3" labelFloat="true" layoutX="436.0" layoutY="355.0" maxWidth="467.0" minWidth="149.0" prefHeight="47.0" prefWidth="467.0" promptText="Username" unFocusColor="#2a6171">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="password" focusColor="#75cac3" labelFloat="true" layoutX="436.0" layoutY="457.0" minHeight="47.0" minWidth="467.0" promptText="Password" unFocusColor="#2a6171">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font></JFXPasswordField>
+      <ImageView fx:id="passwordicon" fitHeight="28.0" fitWidth="22.0" layoutX="414.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="stationservice/imgs/locked.png" />
+        </image>
+      </ImageView>
+      <ImageView fx:id="usericon" fitHeight="28.0" fitWidth="22.0" layoutX="414.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+              <Image url="stationservice/imgs/user.png" />
+          </image>   
+       </ImageView>
+      <Text fx:id="message" fill="#d00a0a" layoutX="656.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="38.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="loginbttn" layoutX="527.0" layoutY="557.0" onAction="#loginAction" prefHeight="76.0" prefWidth="305.0" styleClass="button_connect" text="Connecter" />
+   </children>
+</AnchorPane>

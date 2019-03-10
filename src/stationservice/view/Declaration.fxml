@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="declarationSceen" prefHeight="759.0" prefWidth="850.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationservice.controler.DeclarationController">
+    <stylesheets>
+        <URL value="@/stationservice/ressource/login.css" />
+    </stylesheets>
+   <children>
+      <Text fontSmoothingType="LCD" layoutX="10.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Declaration">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Text>
+      <HBox layoutX="10.0" layoutY="36.0" prefHeight="40.0" prefWidth="557.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pompiste">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </Text>
+            <JFXComboBox fx:id="pompiste_liste" prefHeight="39.0" prefWidth="183.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXComboBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Text>
+            <JFXDatePicker fx:id="date_decl" defaultColor="#eee30b" />
+         </children>
+         <padding>
+            <Insets top="9.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="10.0" layoutY="128.0" prefHeight="289.0" prefWidth="811.0" spacing="19.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <Text layoutX="1.0234375" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sans plomb 1" wrappingWidth="103.396484375">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <HBox layoutX="0.0234375" layoutY="17.501953125" prefHeight="40.0" prefWidth="810.0" spacing="2.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ancien">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp1_anc" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Novueau">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp1_nouv" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal_sp1" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp1_quan" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prix Uni">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp1_prix" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="sous-Total">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp1_total" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Text layoutX="1.0234375" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sans plomb 2" wrappingWidth="103.396484375">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <HBox layoutX="0.0234375" layoutY="17.501953125" prefHeight="40.0" prefWidth="810.0" spacing="2.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ancien">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp2_anc" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Novueau">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp2_nouc" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal_sp2" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp2_quan" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prix Uni">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp2_prix" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="sous-Total">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="sp2_total" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Text layoutX="1.0234375" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Super" wrappingWidth="103.396484375">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <HBox layoutX="0.0234375" layoutY="17.501953125" prefHeight="40.0" prefWidth="810.0" spacing="2.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ancien">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="super_anc" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Novueau">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="super_nouv" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal_super" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="super_quan" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prix Uni">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="super_prix" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="sous-Total">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="super_total" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Text layoutX="1.0234375" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gazoil" wrappingWidth="103.396484375">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <HBox layoutX="0.0234375" layoutY="17.501953125" prefHeight="40.0" prefWidth="810.0" spacing="2.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ancien">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="gazoil_anc" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Novueau">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="gazoil_nouv" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal_gazoil" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="gazoil_quan" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prix Uni">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="gazoil_prix" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="sous-Total">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="gazoil_total" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Text fontSmoothingType="LCD" layoutX="10.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="carburant">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="8.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bons">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Text>
+      <VBox layoutX="9.0" layoutY="448.0" prefHeight="123.0" prefWidth="400.0">
+         <children>
+            <HBox maxWidth="400.0" minWidth="400.0" prefHeight="39.0" prefWidth="400.0" spacing="9.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="850">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numbre ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="n850" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal850" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Somme">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="somme850" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox maxWidth="400.0" minWidth="400.0" prefHeight="39.0" prefWidth="400.0" spacing="9.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="690">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numbre ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="n690" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal690" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Somme">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="somme690" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+               </children>
+            </HBox>
+            <HBox maxWidth="400.0" minWidth="400.0" prefHeight="39.0" prefWidth="400.0" spacing="9.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="839">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numbre ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="n839" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal839" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Somme">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="somme839" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="409.0" layoutY="455.0" prefHeight="123.0" prefWidth="400.0">
+         <children>
+            <HBox maxWidth="400.0" minWidth="400.0" prefHeight="39.0" prefWidth="400.0" spacing="9.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="332">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numbre ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="n332" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal332" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Somme">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="somme332" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox maxWidth="400.0" minWidth="400.0" prefHeight="39.0" prefWidth="400.0" spacing="9.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="416">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numbre ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="n416" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal416" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Somme">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="somme416" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+               </children>
+            </HBox>
+            <HBox maxWidth="400.0" minWidth="400.0" prefHeight="39.0" prefWidth="400.0" spacing="4.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1150">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numbre ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="n1150" maxWidth="96.0" minWidth="96.0" onKeyTyped="#cal1150" prefHeight="33.0" prefWidth="96.0" unFocusColor="#eee30b">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Somme">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <JFXTextField fx:id="somme1150" disable="true" maxWidth="96.0" minWidth="96.0" prefHeight="33.0" prefWidth="96.0" text="0" unFocusColor="#eee30b" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Text fontSmoothingType="LCD" layoutX="18.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toutal carburant">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="total_carburant" disable="true" layoutX="156.0" layoutY="591.0" maxWidth="119.0" minWidth="96.0" prefHeight="33.0" prefWidth="119.0" text="0" unFocusColor="#eee30b" />
+      <Text fontSmoothingType="LCD" layoutX="294.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toutal TAC">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="total_tac" disable="true" layoutX="432.0" layoutY="592.0" maxWidth="119.0" minWidth="96.0" prefHeight="33.0" prefWidth="119.0" text="0" unFocusColor="#eee30b" />
+      <Text fontSmoothingType="LCD" layoutX="566.0" layoutY="617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toutal Espece">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="total_espace" disable="true" layoutX="704.0" layoutY="593.0" maxWidth="119.0" minWidth="96.0" prefHeight="33.0" prefWidth="119.0" text="0" unFocusColor="#eee30b" />
+      <Text fontSmoothingType="LCD" layoutX="18.0" layoutY="669.0" strokeType="OUTSIDE" strokeWidth="0.0" text="caisse">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="casse" layoutX="156.0" layoutY="645.0" maxWidth="119.0" minWidth="96.0" onKeyPressed="#caisse_pressed" prefHeight="33.0" prefWidth="119.0" unFocusColor="#eee30b" />
+      <Text fontSmoothingType="LCD" layoutX="287.0" layoutY="669.0" strokeType="OUTSIDE" strokeWidth="0.0" text="deffirence">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="defference" disable="true" layoutX="425.0" layoutY="645.0" maxWidth="119.0" minWidth="96.0" prefHeight="33.0" prefWidth="119.0" text="0" unFocusColor="#eee30b" />
+      <JFXButton fx:id="annuler_bttn" layoutX="675.0" layoutY="696.0" onAction="#cancelAction" prefHeight="40.0" prefWidth="128.0" stylesheets="@../ressource/login.css" text="Annuler" />
+      <JFXButton fx:id="save_button" layoutX="492.0" layoutY="696.0" onAction="#SaveAction" prefHeight="40.0" prefWidth="146.0" stylesheets="@../ressource/login.css" text="Sauvgarder" />
+      <JFXButton fx:id="Lostebttn" layoutX="717.0" layoutY="1.0" onAction="#listeAction" prefHeight="39.0" prefWidth="119.0" text="Liste" />
+      <JFXButton fx:id="nouveau_bttn" layoutX="565.0" layoutY="1.0" onAction="#nouveauAction" prefHeight="39.0" prefWidth="119.0" text="Nouveau" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="268.0" prefWidth="635.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationservice.controler.NotkificationCarburantController">
+    <stylesheets>
+        <URL value="@/stationservice/ressource/login.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="31.0" layoutY="46.0" prefHeight="205.0" prefWidth="573.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="312.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="312.0" minHeight="10.0" prefHeight="146.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="super_quantite" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="sp1_quantite" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="sp2_quantite" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="gazoil_quantite" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="super_icon" fitHeight="91.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="sp1_icon" fitHeight="91.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="sp2_icon" fitHeight="91.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="gaazoil_icon" fitHeight="91.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Super">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sans plomb I" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sans plomb II " GridPane.columnIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gazoil" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="609.0" layoutY="2.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="stationservice/icons/close.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
