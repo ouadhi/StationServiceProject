@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXTogglePane?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -30,26 +31,35 @@
             <Insets left="2.0" />
          </padding>
       </VBox>
-      <AnchorPane fx:id="mainPane" layoutX="148.0" prefHeight="830.0" prefWidth="1218.0" style="-fx-background-color: #ffffff;" stylesheets="@../ressource/login.css">
-         <children>
-            <ImageView fitHeight="195.0" fitWidth="171.0" layoutX="530.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="stationservice/images/logonaftal.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
+      <ScrollPane layoutX="148.0">
+         <content>
+            <AnchorPane fx:id="mainPane" prefHeight="830.0" prefWidth="1218.0" style="-fx-background-color: #ffffff;" stylesheets="@../ressource/login.css">
+               <children>
+                  <ImageView fitHeight="195.0" fitWidth="171.0" layoutX="530.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="stationservice/images/logonaftal.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
       <JFXTogglePane layoutX="117.0" layoutY="101.0" />
       <ImageView fitHeight="89.0" fitWidth="96.0" layoutX="30.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="stationservice/imgs/man.png" />
          </image>
       </ImageView>
-      <Text fx:id="user_txt" layoutX="15.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="110.48453307151794">
+      <Text fx:id="user_txt" layoutX="4.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="110.48453307151794">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Text>
       <Separator layoutX="2.0" layoutY="200.0" prefHeight="3.0" prefWidth="141.0" />
+      <ImageView fx:id="more" fitHeight="21.0" fitWidth="14.0" layoutX="125.0" layoutY="154.0" onMouseClicked="#moreaction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="stationservice/imgs/more.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

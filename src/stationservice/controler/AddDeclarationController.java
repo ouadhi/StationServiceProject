@@ -570,12 +570,14 @@ public class AddDeclarationController implements Initializable {
 
     private void setAllOnlyNumbres() {
         for (Node node : Methode.getAllNodes(rootpane)) {
-            if (node instanceof JFXTextField) {
+            if (node instanceof JFXTextField && !node.getId().equals("monnaie_avance")) {
                 JFXTextField text = (JFXTextField) node;
                 Methode.setOnlyNumbre(text);
                 Methode.setSelectedMouseClick(text);
             }
         }
+        
+
     }
 
     private void setAllZero() {
@@ -592,7 +594,7 @@ public class AddDeclarationController implements Initializable {
         total_somme_produit.setText(Double.toString(this.somme_total));
         calcule_montant();
 
-        double total_avance = this.somme_total - Double.parseDouble(this.avance.getText());
+        float total_avance = (float)this.somme_total - Float.parseFloat(this.avance.getText());
         this.total_avance.setText(Double.toString(total_avance));
     }
 
@@ -622,15 +624,16 @@ public class AddDeclarationController implements Initializable {
             Notification.champVideNotification();
             this.peso.setText("");
         } else {
-            double diff = 0;
-            double peso_val = 0;
+            float diff = 0;
+            float peso_val = 0;
             if (!peso.getText().equals("")) {
-                peso_val = Double.parseDouble(peso.getText());
+                peso_val = Float.parseFloat(peso.getText());
             }
-            diff = montant_val - peso_val;
-            double monnie_avance = diff - Double.parseDouble(avance.getText());
-            this.difference.setText(Double.toString(diff));
-            this.monnaie_avance.setText(Double.toString(monnie_avance));
+            diff =(float) montant_val - peso_val;
+            float monnie_avance = diff - Float.parseFloat(avance.getText());
+            String moString = Float.toString(monnie_avance) ; 
+            this.difference.setText(""+diff);
+            this.monnaie_avance.setText(""+moString);
 
         }
     }
@@ -696,19 +699,8 @@ public class AddDeclarationController implements Initializable {
                 tester  si  les quantites confirme  les reservoirs
                 */
                 
-                System.out.println("save declaration");
-                        doSave(date, time_debut, time_fin , date1 , time_debut1 , time_fin1);
-//                    Alert alert = Notification.ConfirmationAlert();
-//                    alert.show();
-//                    Optional<ButtonType> result = alert.showAndWait();
-//
-//                    if (result.get() == ButtonType.OK) {
-//                        
-//                    } else {
-//                        System.out.println("Hide Alert");
-//                        alert.hide();
-//                    }
-                
+                doSave(date, time_debut, time_fin , date1 , time_debut1 , time_fin1);
+
 
             } else {
                 Notification.WarningMaxDateAlert().show();
