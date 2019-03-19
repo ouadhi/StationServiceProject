@@ -690,18 +690,13 @@ public class AddDeclarationController implements Initializable {
                 System.out.println(date);
                 return;
             }
-
-            if (date.after(DeclarationModel.getMaxDate())) {
+         
+            if (DeclarationModel.getMaxDate() == null || date.after(DeclarationModel.getMaxDate()) ) {
                 // recalcule  les valeurs pour assuree  integrete des donnees 
                 recalcule();
-                
-                /*
-                tester  si  les quantites confirme  les reservoirs
-                */
+                //tester  si  les quantites confirme  les reservoirs
                 
                 doSave(date, time_debut, time_fin , date1 , time_debut1 , time_fin1);
-
-
             } else {
                 Notification.WarningMaxDateAlert().show();
             }

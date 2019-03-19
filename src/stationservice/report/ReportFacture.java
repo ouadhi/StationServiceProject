@@ -4,7 +4,12 @@ import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
+import com.itextpdf.text.pdf.codec.Base64;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
@@ -37,8 +42,18 @@ public class ReportFacture {
 
     public void create_report() {
         try {
-            PdfReader reader = new PdfReader("etat.pdf"); // input PDF
-            PdfStamper stamper = new PdfStamper(reader, new FileOutputStream("etatup.pdf")); // output PDF
+           
+            PdfReader reader = new PdfReader(getClass().getResourceAsStream("/stationservice/ressource/etat.pdf")) ;  // input PDF
+             //PdfReader reader = new PdfReader("etat.pdf"); // input PDF("/stationservice
+          //  PdfStamper stamper = new PdfStamper(reader, new FileOutputStream("etatup.pdf")); // output PDF
+            System.out.println("print");
+            File pdfTemp = new File(getClass().getResource("/stationservice/ressource/etatup.pdf").getPath());
+            System.out.println("print2");
+            FileOutputStream fos = new FileOutputStream(pdfTemp);
+            PdfStamper stamper = new PdfStamper(reader, fos) ;
+            
+            System.out.println("fin imp");
+
             BaseFont bf = BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED); // set font
             BaseFont font_header = BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED); // set font
 

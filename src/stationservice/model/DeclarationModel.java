@@ -68,6 +68,7 @@ public class DeclarationModel {
         SessionsGenerator FactoryObject = new SessionsGenerator();
         Session session = SessionsGenerator.getFactory().openSession();
         Date date = null ; 
+       
         try {
             SQLQuery query  =  session.createSQLQuery("select max(date) from declaration") ; 
             List<Object>  liste =  query.list() ; 
@@ -77,11 +78,14 @@ public class DeclarationModel {
             }
             
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         } finally {
             session.close();
+            return date ; 
         }
-        return date;
+        
+        
+       
      }
 
 }
